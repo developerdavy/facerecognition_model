@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Person Details{% endblock %}
+
+{% block content %}
+<h2>Person Found</h2>
+<p>We found a match! Here are the details:</p>
+
+<ul>
+    <li><strong>Name:</strong> {{ person.first_name }} {{ person.last_name }}</li>
+    <li><strong>Email:</strong> {{ person.email }}</li>
+    <li><strong>Date Enrolled:</strong> {{ person.date_enrolled }}</li>
+</ul>
+{% endblock %}

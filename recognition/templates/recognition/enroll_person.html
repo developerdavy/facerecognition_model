@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Enroll Person{% endblock %}
+
+{% block content %}
+<h2>Enroll New Person</h2>
+<p>Fill in your details and upload a face image to enroll in the system.</p>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" required>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+
+    <label for="face_image">Upload Face Image:</label>
+    <input type="file" name="face_image" required>
+
+    <input type="submit" value="Enroll">
+</form>
+{% endblock %}
