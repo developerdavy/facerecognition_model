@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <header>
+        <% if (success) { %>
+            <p style="color: rgb(0, 89, 255); text-align: center;"><%= success %></p>
+        <% } else { %>
+            <p style="color: red; text-align: center;"><%= error %></p>
+       <% } %>
+        <h1>Welcome, <%= user.name %></h1>
+        <nav>
+            <a href="/contribution/deposit">Make Contribution</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Contributions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody id="contributions-table">
+                <!-- Data will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </main>
+    <script src="/js/users-dashboard.js"></script>
+</body>
+</html>

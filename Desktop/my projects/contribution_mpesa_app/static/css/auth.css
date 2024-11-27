@@ -1,0 +1,91 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column; 
+}
+
+.form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    border-color: #007bff;
+}
+
+.form input.error {
+    border-color: red;
+}
+
+.form button {
+    padding: 12px;
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Password Toggle */
+.toggle-password {
+    display: inline-block;
+    margin-left: -50px;
+    margin-top: -30px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+    background: none;
+    border: none;
+}
+
+/* Additional Styling */
+.link {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

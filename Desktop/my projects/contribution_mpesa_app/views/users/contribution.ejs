@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Contribution</title>
+    <link rel="stylesheet" href="/css/contribution.css">
+</head>
+<body>
+    <header>
+        <h1>Make a Contribution</h1>
+    </header>
+    <main>
+        <form id="contribution-form" action="/contribution/deposit" method="post">
+            <div id="message">
+                <% if (error) { %>
+                <p style="color: red; text-align: center;"><%= error %></p>
+                <% } %>
+
+                <% if (success) { %>
+                <p style="color: lightgreen; text-align: center;"><%= success %></p>
+                <% } %>
+            </div>
+          
+            <label for="amount">Contribution Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+            <input type="number" id="phone" name="phone" placeholder="Enter phone number" required>
+            <button type="submit">Contribute</button>
+        </form>
+    </main>
+    <script src="/js/contribution.js"></script>
+</body>
+</html>
